@@ -174,11 +174,12 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Para wala gid scroll sa mobile */
 }
 
 .lightbox-content {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90vw;  /* Para di mag lapaw sa screen */
+    max-height: 80vh; /* Para di mag lapaw sa taas */
     border-radius: 8px;
     cursor: pointer;
 }
@@ -315,4 +316,20 @@ footer {
 @keyframes slideDown {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column lang sa phone */
+    }
+
+    .service-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    }
 }
