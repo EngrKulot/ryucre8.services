@@ -302,14 +302,32 @@ nav ul li a:hover {
 }
 
 /* Footer */
-footer {
+.footer {
     text-align: center;
     padding: 20px;
-    background: #002244;
-    color: #fff;
-    margin-top: 20px;
-    animation: fadeIn 1s ease-in;
+    background-color: #222;
+    color: white;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Para gitna */
+    align-items: center;
+    flex-wrap: wrap; /* Para di maglapaw */
 }
+
+.footer a {
+    color: skyblue;
+    font-size: 18px;
+    margin: 5px 10px; /* Para may space */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer a i {
+    margin-right: 5px; /* Para may gamay nga space sa icon */
+}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -323,11 +341,10 @@ footer {
 }
 
 
-
-
 @media (max-width: 768px) {
     .services-container {
         grid-template-columns: repeat(1, 1fr); /* 1 column per row */
+        padding: 10px;
     }
 
     .service-gallery {
@@ -337,7 +354,7 @@ footer {
     }
 
     .lightbox-content {
-        max-width: 90vw;
+        max-width: 85vw;
         max-height: 75vh;
     }
 }
@@ -348,7 +365,18 @@ footer {
     }
 
     .lightbox-content {
-        max-width: 85vw; /* Para sakto lang sa phone */
+        max-width: 80vw; /* Para sakto lang sa phone */
         max-height: 70vh;
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        flex-direction: column; /* Para mag-stack kung gamay ang screen */
+        text-align: center;
+    }
+
+    .footer a {
+        font-size: 16px;
+        margin: 5px 0;
     }
 }
