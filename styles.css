@@ -201,19 +201,36 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background: #fff;
-    padding: 50px;
     text-align: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+    width: 100%;
+    overflow: hidden; /* Para di lapaw */
 }
 
 .contact-info {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 90vw; /* Para di lapaw */
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 2px solid #333; /* Para may frame */
+    padding: 20px;
+    border-radius: 10px; /* Para di tusok corners */
+    background: #fff;
 }
 
 .contact-info p {
-    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    word-break: break-word;
+    padding: 5px 15px;
 }
+
+
 
 .map iframe {
     width: 100%;
@@ -307,25 +324,26 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #222;
     color: white;
-    position: relative;
     width: 100%;
     display: flex;
-    justify-content: center; /* Para gitna */
-    align-items: center;
-    flex-wrap: wrap; /* Para di maglapaw */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center horizontally */
+    gap: 10px;
+    overflow: hidden;
 }
 
 .footer a {
     color: skyblue;
     font-size: 18px;
-    margin: 5px 10px; /* Para may space */
     text-decoration: none;
-    display: inline-flex;
+    display: inline-flex; /* Para di siya maglapaw */
     align-items: center;
-}
-
-.footer a i {
-    margin-right: 5px; /* Para may gamay nga space sa icon */
+    gap: 5px;
+    max-width: 90%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Para mag-break kung kailangan */
 }
 
 
@@ -369,14 +387,17 @@ nav ul li a:hover {
         max-height: 70vh;
     }
 }
+
 @media (max-width: 480px) {
-    .footer {
-        flex-direction: column; /* Para mag-stack kung gamay ang screen */
-        text-align: center;
+    .contact-info {
+        font-size: 16px;
+        max-width: 95%;
+        padding: 15px;
+        border-radius: 8px; /* Para di tusok */
     }
 
-    .footer a {
-        font-size: 16px;
-        margin: 5px 0;
+    .contact-info p {
+        font-size: 14px;
     }
 }
+
