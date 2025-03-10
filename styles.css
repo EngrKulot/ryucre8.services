@@ -1,0 +1,318 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header with Hero Section */
+header {
+    background: url('./logoo.jpg') no-repeat center center; /* Ensure the background is centered */
+    background-size: cover; /* Make the background image cover the entire header */
+    color: skyblue;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+    min-height: 300px; /* Default height for desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* For tablets and phones */
+    header {
+        min-height: 200px; /* Reduce height for smaller screens */
+        padding: 50px 15px;
+    }
+}
+
+@media (max-width: 480px) { /* For smaller phones */
+    header {
+        min-height: 150px; /* Further reduce height for very small screens */
+        padding: 40px 10px;
+    }
+}
+
+
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    background: #002244;
+    animation: slideDown 1s ease-in-out;
+    margin: 0; /* Ensures no margin around the navigation */
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative; /* Makes sure the link is clickable */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: block; /* Makes the anchor a block-level element for better click area */
+    padding: 10px 20px; /* Adds padding for a larger clickable area */
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Company Profile Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+/* Services Section */
+/* General Styles */
+#services {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Grid */
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.service-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Effect */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* Contact Section */
+#contact {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border: none;
+    margin-top: 20px;
+}
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.service-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row on phones */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #002244;
+    color: #fff;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

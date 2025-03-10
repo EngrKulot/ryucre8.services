@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYUCRE8</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        </header>
+        <nav>
+            <ul>
+                <hr/><li><a href="#about">About Us</a></li><hr/>
+                <li><a href="#services">Services</a></li><hr/>
+                <li><a href="#contact">Contact</a></li><hr/>
+                
+            </ul>
+        </nav>
+    
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p><strong>Welcome to RYUCRE8.</strong> </p>
+        <p>At RYUCRE8, we provide high-quality and affordable printing services for businesses and personal needs. From business cards and flyers to banners and custom prints, we ensure vibrant colors and premium materials. Fast, reliable, and professional—let’s bring your ideas to life!</p>
+        
+        <div class="profile-card">
+            <h3>Our Vision</h3>
+            <p>To provide high-quality and affordable printing services that help businesses and individuals bring their ideas to life with creativity, reliability, and excellent customer service. We aim to be a trusted local printing partner, offering innovative and customized solutions while maintaining fast turnaround times and customer satisfaction. Through dedication and passion for our craft, we strive to grow alongside our clients and contribute to their success.</p>
+        </div>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- PHOTO PRINTING -->
+            <div class="service-box">
+                <h3>PHOTO PRINTING</h3>
+                <p>High-quality photo prints for your memories.</p>
+                <div class="service-gallery">
+                    <img src="photo1.jpg" alt="Photo Printing 1" class="clickable">
+                    <img src="photo2.jpg" alt="Photo Printing 2" class="clickable">
+                    <img src="photo3.jpg" alt="Photo Printing 3" class="clickable">
+                </div>
+            </div>
+    
+            <!-- EVENT GIVEAWAYS -->
+            <div class="service-box">
+                <h3>EVENT GIVEAWAYS</h3>
+                <p>Custom giveaways for any occasion.</p>
+                <div class="service-gallery">
+                    <img src="giveaway1.jpg" alt="Event Giveaway 1" class="clickable">
+                    <img src="giveaway2.jpg" alt="Event Giveaway 2" class="clickable">
+                    <img src="giveaway3.jpg" alt="Event Giveaway 3" class="clickable">
+                </div>
+            </div>
+    
+            <!-- PERSONALIZED ITEMS -->
+            <div class="service-box">
+                <h3>PERSONALIZED ITEMS</h3>
+                <p>Customized items for personal or business use.</p>
+                <div class="service-gallery">
+                    <img src="item1.jpg" alt="Personalized Item 1" class="clickable">
+                    <img src="item2.jpg" alt="Personalized Item 2" class="clickable">
+                    <img src="item3.jpg" alt="Personalized Item 3" class="clickable">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Facebook:</strong>https://www.facebook.com/ryucre8</p>
+            <p><strong>Phone Number:</strong>09235788844</p>
+            <p><strong>Email:</strong> ryucre8@gmail.com</p>
+        </div>
+        
+        
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 RYUCRE8. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
