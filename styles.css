@@ -253,16 +253,17 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; /* Wala na sang lapaw nga scrolling */
 }
 
 .lightbox-content {
-    max-width: 90vw;  /* 90% sang screen width */
+    max-width: 90vw; /* 90% sang screen width */
     max-height: 80vh; /* 80% sang screen height */
     border-radius: 8px;
     cursor: pointer;
-    object-fit: contain; /* Para di mag stretch */
+    object-fit: contain; /* Para di mag-stretch */
 }
+
 
 .close {
     position: absolute;
@@ -322,6 +323,8 @@ footer {
 }
 
 
+
+
 @media (max-width: 768px) {
     .services-container {
         grid-template-columns: repeat(1, 1fr); /* 1 column per row */
@@ -334,7 +337,7 @@ footer {
     }
 
     .lightbox-content {
-        max-width: 95vw;
+        max-width: 90vw;
         max-height: 75vh;
     }
 }
@@ -345,7 +348,7 @@ footer {
     }
 
     .lightbox-content {
-        max-width: 90vw;
+        max-width: 85vw; /* Para sakto lang sa phone */
         max-height: 70vh;
     }
 }
