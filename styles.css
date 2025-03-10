@@ -253,12 +253,15 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .lightbox-content {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90vw;  /* 90% sang screen width */
+    max-height: 80vh; /* 80% sang screen height */
     border-radius: 8px;
+    cursor: pointer;
+    object-fit: contain; /* Para di mag stretch */
 }
 
 .close {
@@ -318,18 +321,31 @@ footer {
     to { transform: translateY(0); opacity: 1; }
 }
 
+
 @media (max-width: 768px) {
     .services-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 column lang sa phone */
+        grid-template-columns: repeat(1, 1fr); /* 1 column per row */
     }
 
     .service-gallery {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        gap: 10px;
+    }
+
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 75vh;
     }
 }
 
 @media (max-width: 480px) {
     .service-gallery {
         grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    }
+
+    .lightbox-content {
+        max-width: 90vw;
+        max-height: 70vh;
     }
 }
